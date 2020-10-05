@@ -49,6 +49,8 @@ extension ViewController{
         self.view.addSubview(percentButton)
         divideButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(divideButton)
+        resultLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(resultLabel)
         
         
         
@@ -188,6 +190,14 @@ extension ViewController{
             divideButton.bottomAnchor.constraint(equalTo: multiplyButton.topAnchor),
             divideButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1/4),
             divideButton.heightAnchor.constraint(equalTo: divideButton.widthAnchor)
+        ])
+        
+        //MARK: - Label
+        NSLayoutConstraint.activate([
+            resultLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 9/10),
+            resultLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            resultLabel.bottomAnchor.constraint(equalTo: removeButton.topAnchor, constant: -20)
+
         ])
     }
     

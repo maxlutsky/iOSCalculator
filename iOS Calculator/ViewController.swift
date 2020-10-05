@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var resultLabel: UILabel = {
+        var label = UILabel()
+        label.text = "ERROR"
+        label.textAlignment = .right
+        label.font =  UIFont(name: "Helvetica Neue", size: 64)
+        label.textColor = .white
+        return label
+    }()
+    
     var plusButton = CalcButton(label: "+", color: .orange)
     
     var equalButton = CalcButton(label: "=", color: .orange)
